@@ -1,8 +1,8 @@
-import React from 'react'
-import carrito from '../../img/carrito-de-compras.png'
-import heart from '../../img/heart.png'
-import notification from '../../img/notification.png'
-import user from '../../img/user.png'
+import React from 'react';
+import carrito from '../../img/carrito-de-compras.png';
+import heart from '../../img/heart.png';
+import notification from '../../img/notification.png';
+import user from '../../img/user.png';
 
 
 
