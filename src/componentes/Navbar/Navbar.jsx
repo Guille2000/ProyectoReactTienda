@@ -1,31 +1,44 @@
 import React from 'react'
+import carrito from '../../img/carrito-de-compras.png'
+import heart from '../../img/heart.png'
+import notification from '../../img/notification.png'
+import user from '../../img/user.png'
+
+
+
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="#">Navbar</a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
+    <header className="header container-fluid d-lg-block">
+      <div className="d-flex justify-content-between align-items-center p-3 shadow-sm">
+        <p className="fs-3 fw-bold m-0 me-4"> <span className="text-primary">u</span>niversidad </p>
+
+        <form className="flex-grow-1">
+          <input
+            type="search"
+            className="form-control bg-light"
+            placeholder="Busca cualquier cosa"
+          />
+        </form>
+
+        <nav className="d-flex">
+          <a href="#" className="nav-link text-dark text-decoration-none">U For Business</a>
+          <a href="#" className="nav-link text-dark text-decoration-none">Enseña en U</a>
+          <a href="#" className="nav-link text-dark text-decoration-none">Mi aprendizaje</a>
+
+        </nav>
+
+        <nav className="d-flex  gap-3">
+          <a href="#"><img src={carrito} alt="" /></a>
+          <a href="#"><img src={heart} alt="" /></a>
+          <a href="#"><img src={notification} alt="" /></a>
+          <a href="#"><img src={user} alt="" /></a>
+
+
+
+        </nav>
       </div>
-    </div>
-  </nav>
+    </header>
   )
 }
 
