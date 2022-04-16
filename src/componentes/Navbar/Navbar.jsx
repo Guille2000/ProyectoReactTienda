@@ -1,8 +1,6 @@
 import React from 'react';
-import carrito from '../../img/carrito-de-compras.png';
-import heart from '../../img/heart.png';
-import notification from '../../img/notification.png';
-import user from '../../img/user.png';
+import Cartwidget from '../Cartwidget/Cartwidget';
+import '../styles/navbar.css'
 
 
 
@@ -16,27 +14,20 @@ const Navbar = () => {
         <form className="flex-grow-1">
           <input
             type="search"
-            className="form-control bg-light"
+            className="form-control bg-light d-none d-md-block"
             placeholder="Busca cualquier cosa"
           />
         </form>
-
-        <nav className="d-flex">
+        <nav className="d-md-flex d-none" id="navegacion">
           <a href="#" className="nav-link text-dark text-decoration-none">U For Business</a>
           <a href="#" className="nav-link text-dark text-decoration-none">Enseña en U</a>
           <a href="#" className="nav-link text-dark text-decoration-none">Mi aprendizaje</a>
 
         </nav>
 
-        <nav className="d-flex  gap-3">
-          <a href="#"><img src={carrito} alt="" /></a>
-          <a href="#"><img src={heart} alt="" /></a>
-          <a href="#"><img src={notification} alt="" /></a>
-          <a href="#"><img src={user} alt="" /></a>
+         <Cartwidget/>
 
-
-
-        </nav>
+      
       </div>
     </header>
   )
