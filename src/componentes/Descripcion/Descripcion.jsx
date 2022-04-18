@@ -3,8 +3,8 @@ import '../../scss/app.scss'
 
 const Descripcion = () => {
   return (
-    <section className="container p-4 categoria-curso mt-5">
-      <h2 className="fs-5">Lo que aprenderás</h2>
+    <section className="container p-4  categoria-curso mt-5">
+      <h2 className="fuente">Lo que aprenderás</h2>
       <div className="row align-items-center p-4">
         <div className="col-md-6 mb-3">
           <p class="m-0"><i class="bi bi-check"></i>A dominar JavaScript a la perfección</p>

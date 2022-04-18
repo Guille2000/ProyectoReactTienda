@@ -4,7 +4,7 @@ import '../../scss/app.scss'
 const Contenido = () => {
     return (
         <section className="container p-4">
-            <h2 className="fs-5">Contenido del curso</h2>
+            <h2 className="fuente">Contenido del curso</h2>
             <div className="d-md-flex text-center gap-3 mt-3">
                 <p>3 secciones</p>
                 <p>• 50 clases</p>
