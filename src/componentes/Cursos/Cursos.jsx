@@ -1,31 +1,29 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import '../styles/cursos.css'
+import '../../scss/app.scss'
 
 
 const Cursos = () => {
   return (
     <section className="cursos container-xl mt-5 pt-5">
-      <h3>Elige tu curso tu curso preferido</h3>
+      <h3>Elige tu curso preferido</h3>
       <p className="fs-4">Entre los cursos disponibles, con contenido actualizado</p>
 
       <nav className="nav masonry-filter">
         <li className="nav-item">
-          <a className="nav-link text-dark" data-filter=".javascript">Javascript</a>
+          <a className="nav-link text-dark">Javascript</a>
         </li>
         <li className="nav-item">
-          <a  className="nav-link text-dark" data-filter=".react">React</a>
+          <a  className="nav-link text-dark">UI Y UIX</a>
         </li>
 
         <li className="nav-item">
-          <a  className="nav-link text-dark" data-filter=".php">PHP</a>
+          <a  className="nav-link text-dark">Desarrollo Web Completo</a>
         </li>
 
         
       </nav>
-      <div class="masonry-container row mx-n4 mt-n6">
       <Cards/>
-      </div>
 
     </section>
   )

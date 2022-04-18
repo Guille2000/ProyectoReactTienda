@@ -12,7 +12,6 @@ function App() {
       <Navbar/>
       <Descuentos/>
       <ItemListContainer/>
-      <Cursos/>
     </div>
 
   

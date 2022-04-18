@@ -1,7 +1,6 @@
 import React from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
-import '../styles/navbar.css'
-
+import '../../scss/app.scss'
 
 
 
