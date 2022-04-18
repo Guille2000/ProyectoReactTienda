@@ -1,6 +1,7 @@
 import React from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
 import '../../scss/app.scss'
+import Producto from '../Producto/Producto';
 
 
 
