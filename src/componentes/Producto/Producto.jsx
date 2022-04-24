@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 import curso1 from '../../img/curso_6.jpg';
 import estrellas from '../../img/estrellas.png';
 import '../../scss/app.scss'
@@ -18,15 +19,16 @@ const Producto = () => {
                 4.7
             </p>
             <img className="me-2 calificacion" src={estrellas} alt="calificacion estrellas"/>
-            <p className="m-0 total text-primary">(10.867 calificacion)</p>
+            <p className="m-0 total text-primary">(10.867 calificacion)</p><p className="text-light m-0 mx-2">20000 estudiantes</p>
         </div>
         <p className="precio fw-bold text-light">Creado por <span className="original fw-normal text-primary">Guillermo Mabel</span> </p>
-        <p className="text-light m-0">Última actualización: 3/2022</p>
-        <p  className="text-light m-0">Español</p>
+        <p className="text-light m-0"><i class="bi bi-patch-exclamation m-1"></i>Última actualización: 3/2022</p>
+        <p  className="text-light m-0"> <i class="bi bi-badge-cc m-1"></i>Español</p>
 
         <h3 className="fs-1 text-light mt-3 fw-bold">10$USD</h3>
 
-        <a className="btn btn-success w-100 text-light"href="">Añadir a la cesta</a>
+        <ItemCount/>
+        
     </div>
 </section>
 

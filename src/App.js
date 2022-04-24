@@ -7,7 +7,7 @@ import Producto from './componentes/Producto/Producto';
 import './scss/app.scss';
 import Descripcion from './componentes/Descripcion/Descripcion';
 import Contenido from './componentes/Contenido/Contenido';
-
+import Caracteristicas from './componentes/Caracteristicas/Caracteristicas';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <Producto/>
       <Descripcion/>
       <Contenido/>
+      <Caracteristicas/>
     </div>
 
   

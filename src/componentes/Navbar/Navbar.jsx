@@ -19,9 +19,9 @@ const Navbar = () => {
           />
         </form>
         <nav className="d-md-flex d-none" id="navegacion">
-          <a href="#" className="nav-link text-dark text-decoration-none">U For Business</a>
-          <a href="#" className="nav-link text-dark text-decoration-none">Enseña en U</a>
-          <a href="#" className="nav-link text-dark text-decoration-none">Mi aprendizaje</a>
+          <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">U For Business</a>
+          <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">Enseña en U</a>
+          <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">Mi aprendizaje</a>
 
         </nav>
 
