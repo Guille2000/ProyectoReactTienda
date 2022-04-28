@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import Producto from '../Producto/Producto'
+import Item from '../Item/Item'
 
 const ItemCount = () => {
 

@@ -5,7 +5,8 @@ import estrellas from '../../img/estrellas.png';
 import '../../scss/app.scss'
 
 
-const Producto = () => {
+const Item = ({img, h2, parrafo, puntaje, 
+             estrellitas, calificacion, creador, actualizacion, idioma, precio}) => {
   return (
     <section className="fondo">
     <div className="text-center">
@@ -38,4 +39,4 @@ const Producto = () => {
   )
 }
 
-export default Producto
+export default Item
