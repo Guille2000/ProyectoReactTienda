@@ -4,12 +4,21 @@ import ItemList from '../ItemList/ItemList'
 
 
 
-function ItemListContainer({Producto}) {
+function ItemListContainer() {
   const [productos, setProductos] = useState([])
 
   const data = [
+
     {
-      
+      id:1,
+      h2:'Curso de JavaScript moderno creando +40 proyectos'
+  
+    },
+    
+    {
+      id:2,
+      h2:'Curso de JavaScript moderno creando +20 proyectos'
+  
     }
   ]
 
@@ -39,7 +48,7 @@ function ItemListContainer({Producto}) {
   return (
     <div>
       <Cursos/>
-      <ItemList productos={productos}/>
+      {<ItemList productos={productos}/>}
     </div>
   )
 
