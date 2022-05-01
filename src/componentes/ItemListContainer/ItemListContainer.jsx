@@ -1,58 +1,76 @@
 import React, { useState, useEffect } from 'react'
-import Cursos from '../Cursos/Cursos'
-import ItemList from '../ItemList/ItemList'
+import curso1 from '../../img/curso_6.jpg';
+import estrellas from '../../img/estrellas.png';
+import ItemList from '../ItemList/ItemList';
 
 
 
-function ItemListContainer() {
-  const [productos, setProductos] = useState([])
+const ItemListContainer = () => {
 
-  const data = [
+    const [productos, setProductos] = useState([])
 
-    {
-      id:1,
-      h2:'Curso de JavaScript moderno creando +40 proyectos'
-  
-    },
-    
-    {
-      id:2,
-      h2:'Curso de JavaScript moderno creando +20 proyectos'
-  
-    }
-  ]
+    const data = [
+        {
+            id: 1,
+            img: `${curso1}`,
+            h4: 'Curso de JavaScript moderno',
+            instructor: 'Guillermo Mabel',
+            puntaje: '4.7',
+            estrellas: `${estrellas}`,
+            calificacion: '(3121)',
+            precio: '10 USD$',
+            original: '200USD$'
+        },
+        {
+            id: 2,
+            img: `${curso1}`,
+            h4: 'Curso de JavaScript moderno',
+            instructor: 'Guillermo Mabel',
+            puntaje: '4.7',
+            estrellas: `${estrellas}`,
+            calificacion: '(3121)',
+            precio: '10 USD$',
+            original: '200USD$'
+        },
+        {
+            id: 2,
+            img: `${curso1}`,
+            h4: 'Curso de JavaScript moderno',
+            instructor: 'Guillermo Mabel',
+            puntaje: '4.7',
+            estrellas: `${estrellas}`,
+            calificacion: '(3121)',
+            precio: '10 USD$',
+            original: '200USD$'
+        }
+    ]
 
 
-
-  useEffect(() => {
-    const promise = new Promise( (resolve, reject) => {
-      setTimeout(() => {
-        resolve(data)
-      }, 2000)
+useEffect(() => {
+ const promesa = new Promise((resolve, reject) => {
+     setTimeout(() => {
+     resolve(data)
+     }, 2000)
     })
-    promise.then((res) => {
-      setProductos(res)
-    }).catch ((err) => 
-      console.log(err)
-    ) .then(() => console.log(productos)
+promesa.then((res) => {
+setProductos(res)
+  }).catch((err) => 
+  console.log(err)
+ ) .then(() =>
+ console.log(productos)
+)
+
+ return () => {
+
+        }
+    }, [])
+
+
+    return (
+        <div>
+              {<ItemList productos={productos}/>}
+        </div>
     )
-  
-    return () => {
-      
-    }
-  }, [])
-  
-
-
-
-  return (
-    <div>
-      <Cursos/>
-      {<ItemList productos={productos}/>}
-    </div>
-  )
-
-
 }
 
 export default ItemListContainer

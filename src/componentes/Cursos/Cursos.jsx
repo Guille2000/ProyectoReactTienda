@@ -1,6 +1,11 @@
 import React from 'react'
-import Cards from '../Cards/Cards'
+import Cards from '../Contenedor/Contenedor'
 import '../../scss/app.scss'
+import curso1 from '../../img/curso_6.jpg';
+import estrellas from '../../img/estrellas.png';
+import Contenedor from '../Contenedor/Contenedor';
+
+
 
 
 const Cursos = () => {
@@ -23,7 +28,7 @@ const Cursos = () => {
 
         
       </nav>
-      <Cards/>
+      <Contenedor/>
 
     </section>
   )
