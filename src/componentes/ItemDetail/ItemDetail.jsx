@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({img, h2, parrafo, puntaje, estrellitas, calificacion, creador, autor, actualizacion, idioma, precio, original}) => {
+const ItemDetail = ({img, h2, parrafo, puntaje, estrellitas, calificacion, creador, autor, actualizacion, idioma, precio}) => {
   return (
     <section className="fondo">
     <div className="text-center">
@@ -9,7 +9,7 @@ const ItemDetail = ({img, h2, parrafo, puntaje, estrellitas, calificacion, cread
     </div>
     <div className="texto mt-5 p-3">
         <h2 className="text-light fs-3 fw-700 programacion">{h2}</h2>
-        <p className="text-light fw-400">{parrafo}</p>
+        <p className="text-light fs-5 fw-400">{parrafo}</p>
         <div className="d-flex align-items-center">
             <p className="m-0 me-2 puntaje fw-bold text-secondary">
                 {puntaje}
