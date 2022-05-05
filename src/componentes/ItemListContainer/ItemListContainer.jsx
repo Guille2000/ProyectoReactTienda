@@ -5,6 +5,7 @@ import ItemList from '../ItemList/ItemList';
 
 
 
+
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
@@ -33,7 +34,7 @@ const ItemListContainer = () => {
             original: '200USD$'
         },
         {
-            id: 2,
+            id: 3,
             img: `${curso1}`,
             h4: 'Curso de JavaScript moderno',
             instructor: 'Guillermo Mabel',
@@ -42,7 +43,29 @@ const ItemListContainer = () => {
             calificacion: '(3121)',
             precio: '10 USD$',
             original: '200USD$'
-        }
+        },
+        {
+            id: 4,
+            img: `${curso1}`,
+            h4: 'Curso de JavaScript moderno',
+            instructor: 'Guillermo Mabel',
+            puntaje: '4.7',
+            estrellas: `${estrellas}`,
+            calificacion: '(3121)',
+            precio: '10 USD$',
+            original: '200USD$'
+        },
+        {
+            id: 5,
+            img: `${curso1}`,
+            h4: 'Curso de JavaScript moderno',
+            instructor: 'Guillermo Mabel',
+            puntaje: '4.7',
+            estrellas: `${estrellas}`,
+            calificacion: '(3121)',
+            precio: '10 USD$',
+            original: '200USD$'
+        } 
     ]
 
 

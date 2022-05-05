@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Item from '../Item/Item'
 
 const ItemCount = () => {
 
@@ -20,9 +19,10 @@ const ItemCount = () => {
     <>
     <a className="btn btn-success w-100 text-light"href="">Añadir a la cesta</a>
 
-    <p className="text-white text-center fs-5"> <i onClick={restar}  className="bi bi-dash-circle mx-3"></i>
-      La cantidad es {stock}      <i onClick={sumar} className="bi bi-plus-circle mx-3"></i> 
-      
+    <p className="text-white text-center fs-5"> 
+    <i onClick={restar}  className="bi bi-dash-circle mx-3"></i>
+      La cantidad es {stock}      
+      <i onClick={sumar} className="bi bi-plus-circle mx-3"></i> 
       </p>
 
     </>
