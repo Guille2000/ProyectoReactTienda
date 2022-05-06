@@ -25,6 +25,7 @@ const ItemCount = () => {
       <i onClick={sumar} className="bi bi-plus-circle mx-3"></i> 
       </p>
 
+
     </>
 
   )

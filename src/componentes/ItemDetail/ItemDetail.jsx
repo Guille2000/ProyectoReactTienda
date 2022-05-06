@@ -1,8 +1,7 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
-
-const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, creador, autor, actualizacion, idioma, precio }}) => {
+const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }}) => {
 
     console.log(h2)
 
@@ -19,7 +18,7 @@ const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificac
                 {puntaje}
             </p>
             <img className="me-2 calificacion" src={estrellitas} alt="calificacion estrellas" />
-            <p className="m-0 total text-primary">{calificacion}</p><p className="text-light m-0 mx-2">20000 estudiantes</p>
+            <p className="m-0 total text-primary">{calificacion}</p><p className="text-light m-0 mx-2">{estudiantes}</p>
         </div>
         <p className="precio fw-bold text-light">{creador} <span className="original fw-normal text-primary">{autor}</span> </p>
         <p className="text-light m-0"><i class="bi bi-patch-exclamation m-1"></i>{actualizacion}</p>
@@ -28,6 +27,7 @@ const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificac
         <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
 
         <ItemCount />
+
 
     </div>
 </section>

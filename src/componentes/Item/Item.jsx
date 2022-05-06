@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
+
 const Item = ({productos}) => {
  const {id, img, h4, instructor, puntaje, estrellas, calificacion, precio, original} = productos
   return (
@@ -27,6 +28,7 @@ const Item = ({productos}) => {
 
         </div>
     </div>
+
 
 </li>
   )
