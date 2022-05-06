@@ -1,45 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import curso1 from '../../img/curso_6.jpg';
-import estrellas from '../../img/estrellas.png';
-import ItemListDetails from '../ItemListContainer/ItemListDetails/ItemListDetails';
+import { data } from '../../config';
+import { useParams } from 'react-router-dom';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
 
 
 const ItemDetailContainer = () => {
 
+
+    const {id} = useParams()
+
     const [productos, setProductos] = useState([])
+    const filtrado = data.find((prod) => prod.id === Number(id))
 
-    const data = [
-        {
-            id: 1,
-            img: `${curso1}`,
-            h2: 'Curso de JavaScript moderno 20 proyectos',
-            parrafo:'Aprende JavaScript moderno con un curso 100% practico',
-            puntaje: '4.7',
-            estrellitas: `${estrellas}`,
-            creador: 'Creado por: ',
-            autor: 'Guillermo Mabel',
-            actualizacion: '3/22',
-            idioma: 'Español',
-            precio:'10USD$'
 
-        }
-
-    ]
     useEffect(() => {
         const promesa = new Promise((resolve, reject) => {
             setTimeout(() => {
-            resolve(data)
+            resolve(filtrado)
             }, 2000)
            })
        promesa.then((res) => {
        setProductos(res)
-         }).catch((err) => 
-         console.log(err)
-        ) .then(() =>
-        console.log(productos)
-       )
-       
+       }) 
+       .then (() => console.log(productos))
+       .catch ((err) => console.log(err))
        return () => {
 
     }
@@ -48,7 +33,7 @@ const ItemDetailContainer = () => {
 
 return (
     <div>
-          {<ItemListDetails productos={productos}/>}
+          {productos ? <ItemDetail  productos={productos} /> : <h1>Cargando</h1>}
     </div>
 )
 }

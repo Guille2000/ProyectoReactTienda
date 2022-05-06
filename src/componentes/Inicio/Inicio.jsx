@@ -1,10 +1,12 @@
 import React from 'react';
 import persona from '../../img/persona1.png';
 import '../styles/header.css'
+import Cursos from '../Cursos/Cursos';
 
 
-const Descuentos = () => {
+const Inicio = () => {
     return (
+        <>
         <section className="descuentos container-xl">
             <div className="row justify-content-around align-items-lg-end bg-light">
                 <div className="col-lg-4 shadow bg-white">
@@ -24,7 +26,13 @@ const Descuentos = () => {
                  </div>
             </div>
         </section>
+
+        <Cursos/>
+        </>
+        
+
+      
     )
 }
 
-export default Descuentos
+export default Inicio

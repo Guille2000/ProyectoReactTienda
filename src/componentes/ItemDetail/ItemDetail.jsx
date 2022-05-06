@@ -1,8 +1,12 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({img, h2, parrafo, puntaje, estrellitas, calificacion, creador, autor, actualizacion, idioma, precio}) => {
-  return (
+
+const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, creador, autor, actualizacion, idioma, precio }}) => {
+
+    console.log(h2)
+
+    return (
     <section className="fondo">
     <div className="text-center">
         <img src={img} alt="" />

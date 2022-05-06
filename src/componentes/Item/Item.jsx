@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-const Item = ({img, h4, instructor, puntaje, estrellas, calificacion, precio, original}) => {
+const Item = ({productos}) => {
+ const {id, img, h4, instructor, puntaje, estrellas, calificacion, precio, original} = productos
   return (
     <li className="curso">
     <div className="card">
@@ -20,6 +22,9 @@ const Item = ({img, h4, instructor, puntaje, estrellas, calificacion, precio, or
             </div>
             <p className="precio fw-bold ">{precio} <span className="original fw-normal">
                 {original}</span></p>
+
+            <Link to={`item-detail/${id}`}>Ver el Producto</Link>
+
         </div>
     </div>
 

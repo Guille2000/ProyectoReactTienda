@@ -1,7 +1,7 @@
-import React from 'react';
-import Cartwidget from '../Cartwidget/Cartwidget';
+import React from 'react'
+import Cartwidget from '../Cartwidget/Cartwidget'
 import '../../scss/app.scss'
-
+import {NavLink} from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -18,8 +18,8 @@ const Navbar = () => {
           />
         </form>
         <nav className="d-md-flex d-none" id="navegacion">
-          <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">U For Business</a>
-          <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">Enseña en U</a>
+          <NavLink to="/Business" className="nav-link text-dark text-decoration-none fw-lighter">U For Business</NavLink>
+          <NavLink to="/Inicio" className="nav-link text-dark text-decoration-none fw-lighter">Inicio</NavLink>
           <a href="#" className="nav-link text-dark text-decoration-none fw-lighter">Mi aprendizaje</a>
 
         </nav>
