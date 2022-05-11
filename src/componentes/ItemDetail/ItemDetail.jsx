@@ -1,12 +1,14 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }}) => {
-
-    const quantityToAdd = () => {
-      console.log('Clickeaste')
+    const [cantidadComprada, setCantidadComprada] = useState(0)
+    const quantityToAdd = (cantidad) => {
+      setCantidadComprada(cantidad)
     }
+
     return (
     <section className="fondo">
     <div className="text-center">
@@ -27,12 +29,13 @@ const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificac
         <p className="text-light m-0"> <i class="bi bi-badge-cc m-1"></i>{idioma}</p>
 
         <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
-
-        <ItemCount
-            manejarClick={quantityToAdd}
-           
-        />
-
+        {cantidadComprada > 0 ? (
+             <button>
+               <Link to={'/cart'} >Terminar Compra</Link> 
+             </button>
+        ) :(
+            <ItemCount manejarClick={quantityToAdd} />
+        )}
     </div>
 </section>
 

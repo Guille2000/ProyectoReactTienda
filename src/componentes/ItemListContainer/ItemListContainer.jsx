@@ -7,6 +7,8 @@ const ItemListContainer = () => {
     const {cat} = useParams()
     const [productos, setProductos] = useState([])
 
+
+
     
 
 
@@ -34,7 +36,6 @@ setProductos(res)
 
         }
     }, [])
-
 
     return (
         <div>

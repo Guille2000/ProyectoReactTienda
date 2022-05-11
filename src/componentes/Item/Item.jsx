@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-
 const Item = ({productos}) => {
  const {id, img, h4, instructor, puntaje, estrellas, calificacion, precio, original} = productos
-  return (
+
+ return (
     <li className="curso">
     <div className="card">
         <img className="img-top" src={img} alt="Imagen del curso" />
