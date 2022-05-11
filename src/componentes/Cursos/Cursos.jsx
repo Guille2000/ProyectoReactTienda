@@ -1,11 +1,7 @@
 import React from 'react'
-import Cards from '../Contenedor/Contenedor'
 import '../../scss/app.scss'
-import curso1 from '../../img/curso_6.jpg';
-import estrellas from '../../img/estrellas.png';
-import Contenedor from '../Contenedor/Contenedor';
-
-
+import Contenedor from '../Contenedor/Contenedor'
+import {NavLink} from 'react-router-dom'
 
 
 const Cursos = () => {
@@ -16,14 +12,14 @@ const Cursos = () => {
 
       <nav className="nav masonry-filter">
         <li className="nav-item">
-          <a className="nav-link text-dark">Javascript</a>
+          <NavLink to="/" className="nav-link text-dark">Javascript</NavLink>
         </li>
         <li className="nav-item">
-          <a  className="nav-link text-dark">UI Y UIX</a>
+          <NavLink to="/"  className="nav-link text-dark">UI Y UIX</NavLink>
         </li>
 
         <li className="nav-item">
-          <a  className="nav-link text-dark">Desarrollo Web Completo</a>
+          <NavLink to="/"  className="nav-link text-dark">Desarrollo Web Completo</NavLink>
         </li>
 
         

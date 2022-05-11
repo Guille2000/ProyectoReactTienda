@@ -1,10 +1,12 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
 
 const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }}) => {
 
-    console.log(h2)
-
+    const quantityToAdd = () => {
+      console.log('Clickeaste')
+    }
     return (
     <section className="fondo">
     <div className="text-center">
@@ -26,8 +28,10 @@ const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificac
 
         <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
 
-        <ItemCount />
-
+        <ItemCount
+            manejarClick={quantityToAdd}
+           
+        />
 
     </div>
 </section>

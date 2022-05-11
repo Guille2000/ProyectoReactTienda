@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const ItemCount = () => {
+
+const ItemCount = ({manejarClick}) => {
 
   const [stock, setStock] = useState(1)
 
@@ -17,7 +19,7 @@ const ItemCount = () => {
 
   return (
     <>
-    <a className="btn btn-success w-100 text-light"href="">Añadir a la cesta</a>
+    <Link to="" onClick={manejarClick} className="btn btn-success w-100 text-light">Añadir a la cesta</Link>
 
     <p className="text-white text-center fs-5"> 
     <i onClick={restar}  className="bi bi-dash-circle mx-3"></i>

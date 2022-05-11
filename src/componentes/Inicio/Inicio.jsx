@@ -1,6 +1,5 @@
 import React from 'react';
 import persona from '../../img/persona1.png';
-import '../styles/header.css'
 import Cursos from '../Cursos/Cursos';
 
 
