@@ -10,6 +10,7 @@ import estrellas from '../img/estrellas.png';
 export const data = [
     {
         id: 1,
+        categoria:'javascript',
         img:`${curso1}`,
         h4: 'Curso de JavaScript moderno',
         h2:'Curso de JavaScript moderno',
@@ -29,6 +30,7 @@ export const data = [
     },
     {
         id: 2,
+        categoria:'diseño',
         img:`${curso2}`,
         h4: 'Diseño de UX y UI con Figma - 5 Apps',
         h2:'Diseño de UX y UI con Figma - 5 Apps ',
@@ -48,6 +50,7 @@ export const data = [
     },
     {
         id: 3,
+        categoria:'javascript',
         img:`${curso3}`,
         h4: 'FullStack JavaScript - Node, React y Electron',
         h2:'FullStack JavaScript - Node, React y Electron',
@@ -67,6 +70,7 @@ export const data = [
     },
     {
         id: 4,
+        categoria:'desarrollo',
         img:`${curso4}`,
         h4: 'Desarrollo Web Completo con react y Django',
         h2:'Desarrollo Web Completo con react y Django',
@@ -87,6 +91,7 @@ export const data = [
     },
     {
         id: 5,
+        categoria:'diseño',
         img:`${curso5}`,
         h4: 'Diseño de Interfaces de Usuario Apps Móviles',
         h2:'Diseño de Interfaces de Usuario Apps Móviles',

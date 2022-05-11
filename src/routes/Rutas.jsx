@@ -5,6 +5,7 @@ import Layout from '../componentes/Layout/Layout'
 import Inicio from '../componentes/Inicio/Inicio'
 import Error from '../componentes/Error/Error'
 import ItemDetailContainer from '../componentes/ItemDetailContainer/ItemDetailContainer'
+import ItemListContainer from '../componentes/ItemListContainer/ItemListContainer'
 const Rutas = () => {
   return (
       <>
@@ -14,6 +15,7 @@ const Rutas = () => {
         <Route path="/" element={<Layout/>}>
 
         <Route index element={<Inicio/>} />
+        <Route path="/category/:cat" element={<ItemListContainer/>} />
         <Route path="/Business" element={<Business/>}/>
         <Route path="/Aprendizaje" element={<Aprendizaje/>}/>
 

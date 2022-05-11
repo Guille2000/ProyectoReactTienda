@@ -12,14 +12,14 @@ const Cursos = () => {
 
       <nav className="nav masonry-filter">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link text-dark">Javascript</NavLink>
+          <NavLink to="/category/javascript" className="nav-link text-dark">Javascript</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/"  className="nav-link text-dark">UI Y UIX</NavLink>
+          <NavLink to="/category/diseño"  className="nav-link text-dark">UI Y UIX</NavLink>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/"  className="nav-link text-dark">Desarrollo Web Completo</NavLink>
+          <NavLink to="/category/desarrollo"  className="nav-link text-dark">Desarrollo Web Completo</NavLink>
         </li>
 
         
