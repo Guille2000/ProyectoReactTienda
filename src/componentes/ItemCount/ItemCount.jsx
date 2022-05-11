@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { createRoutesFromChildren, Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 
 const ItemCount = ({manejarClick, stock}) => {
 
-
+  
   const [cantidad, setcantidad] = useState(1)
 
   function sumar(){

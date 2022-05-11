@@ -10,7 +10,9 @@ const ItemList = ({productos}) => {
         productos.length > 0 ? (productos.map((productos) => (<Item key={productos.id} productos={productos} />) ) )
 
         : (
-          <h1>Cargando...</h1>
+          <div className="spinner-border text-primary mx-3" role="status">
+            <span className="sr-only">Cargando...</span>
+          </div>
         )
 
         }
