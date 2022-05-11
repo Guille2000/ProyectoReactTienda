@@ -30,9 +30,7 @@ const ItemDetail = ({productos:{img,h2, parrafo ,puntaje, estrellitas, calificac
 
         <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
         {cantidadComprada > 0 ? (
-             <button>
-               <Link to={'/cart'} >Terminar Compra</Link> 
-             </button>
+            <Link to={'/cart'} className='btn btn-success text-light' >Terminar Compra</Link> 
         ) :(
             <ItemCount manejarClick={quantityToAdd} />
         )}
