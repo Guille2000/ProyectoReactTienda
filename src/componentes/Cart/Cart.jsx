@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
+import ItemCount from '../ItemCount/ItemCount'
 
 const Cart = () => {
   const {carrito} = useContext(GlobalContext)

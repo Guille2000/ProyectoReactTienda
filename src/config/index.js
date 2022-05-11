@@ -7,6 +7,7 @@ import curso5 from '../img/curso_3.jpg';
 import estrellas from '../img/estrellas.png';
 
 
+
 export const data = [
     {
         id: 1,

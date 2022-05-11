@@ -7,12 +7,12 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
 
-
     const { id } = useParams()
 
     const [productos, setProductos] = useState([])
-    const filtrado = data.find((prod) => prod.id === Number(id))
 
+
+    const filtrado = data.find((prod) => prod.id === Number(id))
 
     useEffect(() => {
         const promesa = new Promise((resolve, reject) => {
@@ -29,7 +29,6 @@ const ItemDetailContainer = () => {
 
         }
     }, [])
-
 
     return (
         <div>
