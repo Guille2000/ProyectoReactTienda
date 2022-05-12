@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState, useContext} from 'react'
+import { useState, useContext, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
 import { data } from '../../config'
@@ -8,17 +8,16 @@ import { data } from '../../config'
 const ItemDetail = ({ productos:{stock, img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }}) => {
     
     const {carrito, agregarCarrito} = useContext(GlobalContext)
-    
-    const [state, setState] = useState({ productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }}) 
-       
-       
-      
+
+    const [state, setState] = useState({productos:{img,h2, parrafo ,puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio }})
+
     const [cantidadComprada, setCantidadComprada] = useState(0)
     const quantityToAdd = (cantidad) => {
       setCantidadComprada(cantidad)
     }
 
     return (
+
     <section className="fondo">
     <div className="text-center">
         <img src={img} alt="" />
@@ -39,7 +38,8 @@ const ItemDetail = ({ productos:{stock, img,h2, parrafo ,puntaje, estrellitas, c
 
         <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
         {cantidadComprada > 0 ? (
-            <Link to={'/cart'} onClick={() => agregarCarrito(state)} class="btn btn-success my-4">Finalizar compra</Link> 
+         <Link to={'/cart'} onClick={() => agregarCarrito(state)} className='btn btn-success text-light' >Terminar Compra</Link> 
+
         ) :(
             <ItemCount manejarClick={quantityToAdd}
                         stock={stock}
@@ -47,8 +47,8 @@ const ItemDetail = ({ productos:{stock, img,h2, parrafo ,puntaje, estrellitas, c
         )}
     </div>
 </section>
-
   )
 }
+
 
 export default ItemDetail
