@@ -9,10 +9,10 @@ const ItemCount = ({manejarClick, stock}) => {
   const [cantidad, setcantidad] = useState(1)
 
   function sumar(){
-    cantidad < 5 ? setcantidad(cantidad + 1) : setcantidad(cantidad)
+    cantidad < stock ? setcantidad(cantidad + 1) : setcantidad(cantidad)
   }
   function restar(){
-   cantidad > 1 ? setcantidad (cantidad - 1) : setcantidad(cantidad)
+   cantidad > 0 ? setcantidad (cantidad - 1) : setcantidad(cantidad)
 
   }
 
