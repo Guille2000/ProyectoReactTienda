@@ -11,14 +11,9 @@ const ItemDetail = ({ productos: { stock, img, h2, parrafo, puntaje, estrellitas
     useEffect(() => {
       setState({img, h2, parrafo, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio })
     }, [img])
-    
- 
+
     const [state, setState] = useState({})
        
-  
-
-
-
 
 
     const [cantidadComprada, setCantidadComprada] = useState(0)
@@ -30,7 +25,7 @@ const ItemDetail = ({ productos: { stock, img, h2, parrafo, puntaje, estrellitas
 
         <section className="fondo">
             <div className="text-center">
-                <img src={img} alt="" />
+                <img src={img} alt="Producto imagen" />
             </div>
             <div className="texto mt-5 p-3">
                 <h2 className="text-light fs-3 fw-700 programacion">{h2}</h2>
