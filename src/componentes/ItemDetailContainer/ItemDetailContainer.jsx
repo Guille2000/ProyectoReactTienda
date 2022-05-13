@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { data } from '../../config';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Loader from '../Loader/Loader';
 
 
 
@@ -32,9 +33,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            {productos ? <ItemDetail productos={productos} /> : <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>}
+            {productos ? <ItemDetail productos={productos} /> : <Loader/>}
         </div>
     )
 }

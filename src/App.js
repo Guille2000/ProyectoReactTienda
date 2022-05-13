@@ -6,6 +6,7 @@ import './scss/app.scss';
 function App() {
   return (
       <>
+    
       <GlobalStateContenxt>
       <Rutas/>
       </GlobalStateContenxt>

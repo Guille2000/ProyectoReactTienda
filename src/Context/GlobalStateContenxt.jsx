@@ -9,6 +9,7 @@ export const GlobalContext = createContext('')
     }
 
   return (
+    //en el value digo la informacion que voy a proveer
     <GlobalContext.Provider value={{carrito, agregarCarrito}} >
         {children}
     </GlobalContext.Provider>

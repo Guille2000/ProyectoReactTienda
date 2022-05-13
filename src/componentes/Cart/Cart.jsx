@@ -2,12 +2,15 @@ import React, { useContext } from 'react'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
 
 const Cart = () => {
-  const {carrito} = useContext(GlobalContext)
+  const {carrito} = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
+  console.log(carrito)
   return (
     <ul>
-       {carrito.length > 0 ? carrito.map((item, index) => {
-        <li key={index}>{item.img}</li>
-      }) : <h1>No hay productos</h1>}
+       {carrito.length > 0 ? carrito.map((prod, index) => { 
+         return(
+        <li key={index}>{prod.img}</li>
+      )}) : <h1>No hay productos</h1>}
+      
     </ul>
   )
 }
