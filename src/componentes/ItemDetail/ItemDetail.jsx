@@ -4,12 +4,12 @@ import { useState, useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
 
-const ItemDetail = ({ productos: { stock, img, h2, parrafo, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio } }) => {
+const ItemDetail = ({ productos: {id, stock, img, h2, parrafo, cantidad, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio } }) => {
 
     const { carrito, agregarCarrito } = useContext(GlobalContext)
 
     useEffect(() => {
-      setState({img, h2, parrafo, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio })
+      setState({id, img, h2, parrafo, cantidad, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio })
     }, [img])
 
     const [state, setState] = useState({})

@@ -7,7 +7,7 @@ const ItemCount = ({manejarClick, stock}) => {
 
   
   const [cantidad, setcantidad] = useState(1)
-
+  
   function sumar(){
     cantidad < stock ? setcantidad(cantidad + 1) : setcantidad(cantidad)
   }
@@ -20,7 +20,7 @@ const ItemCount = ({manejarClick, stock}) => {
 
   return (
     <>
-    <Link to="" onClick={() => manejarClick(cantidad)}  className="btn btn-success w-100 text-light">Añadir a la cesta</Link>
+    <Link to=""  onClick={() => manejarClick(cantidad)}  className="btn btn-success w-100 text-light">Añadir a la cesta</Link>
 
     <p className="text-white text-center fs-5"> 
     <i onClick={restar}  className="bi bi-dash-circle mx-3"></i>
