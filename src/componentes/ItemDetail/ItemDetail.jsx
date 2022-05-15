@@ -4,16 +4,11 @@ import { useState, useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
 
-const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, cantidad, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio } }) => {
+const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio } }) => {
 
     const { carrito, agregarCarrito } = useContext(GlobalContext)
 
-    useEffect(() => {
-      setState({id, img, h2, parrafo, cantidad, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio })
-    }, [img])
-
-    const [state, setState] = useState({})
-       
+    
 
     const [cantidadComprada, setCantidadComprada] = useState(0)
     const quantityToAdd = (cantidad) => {
@@ -22,7 +17,17 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, cantidad, puntaje,
         console.log(carrito.cantidad)
     }
 
-    const itemCarro = {h2:h2, img:img, 
+    const [state, setState] = useState({
+
+    })
+    useEffect(() => {
+        setState({id, img, h2, parrafo, cantidadComprada, puntaje, estrellitas, calificacion, estudiantes, creador, autor, actualizacion, idioma, precio })
+      }, [img])
+
+      const itemCarro = {
+        id:id,
+        h2:h2, 
+        img:img, 
         parrafo:parrafo, 
         puntaje:puntaje, 
         estrellitas:estrellitas, 
@@ -34,8 +39,6 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, cantidad, puntaje,
         idioma:idioma, 
         precio:precio,
         cantidad:cantidadComprada}
-
-
 
     return (
 
@@ -59,7 +62,7 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, cantidad, puntaje,
 
                 <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
                 {cantidadComprada > 0 ? (
-                    <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro, cantidad)} className='btn btn-success text-light' >Terminar Compra</Link>
+                    <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light' >Terminar Compra</Link>
                 ) : (
                     <ItemCount  manejarClick={quantityToAdd}
                         stock={stock}

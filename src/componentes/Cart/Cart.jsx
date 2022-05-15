@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 const Cart = () => {
   const { carrito, eliminarProducto, vaciarCart } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
     console.log(carrito.cantidad)
+
   return (
     <>
       {carrito.length > 0 ? carrito.map((prod, index) => {
@@ -44,13 +45,7 @@ const Cart = () => {
                 ) : (
                   <Link to="/">Volver</Link>
                 )}
-      
-
     </>
-
-
-
-
   )
 }
 

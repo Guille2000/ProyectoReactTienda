@@ -27,7 +27,7 @@ export const data = [
         autor:'Guillermo Mabel',
         actualizacion:'3/22',
         idioma:'Español',
-        precio: '10 USD$',
+        precio: 10,
         original: '200USD$'
     },
     {
@@ -48,7 +48,7 @@ export const data = [
         autor:'Lorena Caraballo',
         actualizacion:'4/22',
         idioma:'Español',
-        precio: '10 USD$',
+        precio: 10,
         original: '200USD$'
     },
     {
@@ -69,7 +69,7 @@ export const data = [
         autor:'Elsin Nombre',
         actualizacion:'3/22',
         idioma:'Español',
-        precio: '10 USD$',
+        precio: 10,
         original: '200USD$'
     },
     {
@@ -91,7 +91,7 @@ export const data = [
         autor:'Martin Suarez',
         actualizacion:'2/22',
         idioma:'Español',
-        precio: '10 USD$',
+        precio: 10,
         original: '200USD$'
     },
     {
@@ -112,7 +112,7 @@ export const data = [
         autor:'Victoria Latorre',
         actualizacion:'3/22',
         idioma:'Español',
-        precio: '10 USD$',
+        precio: 10,
         original: '200USD$'
     } 
 ]
