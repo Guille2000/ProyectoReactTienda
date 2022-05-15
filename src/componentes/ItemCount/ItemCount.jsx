@@ -13,7 +13,6 @@ const ItemCount = ({manejarClick, stock}) => {
   }
   function restar(){
    cantidad > 0 ? setcantidad (cantidad - 1) : setcantidad(cantidad)
-
   }
 
 

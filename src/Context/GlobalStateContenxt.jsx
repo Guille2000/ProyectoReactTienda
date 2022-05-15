@@ -7,7 +7,9 @@ export const GlobalContext = createContext('')
 
     const agregarCarrito = (producto) => {
       //no acepta duplicados
+      //some solo devuelve true o false. lo usamos para saber si un valor existe
         if(carrito.some(curso => curso.id === producto.id)){
+          //con el map iteramos sobre cada uno de los registros para detectar cual es el duplicado
           const carritoActualizado = carrito.map(curso => {
             if(curso.id === producto.id){
               curso.cantidad = producto.cantidad

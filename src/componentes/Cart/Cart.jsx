@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
+import {Link} from 'react-router-dom'
 
 const Cart = () => {
   const { carrito, eliminarProducto, vaciarCart } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
-
+    console.log(carrito.cantidad)
   return (
     <>
       {carrito.length > 0 ? carrito.map((prod, index) => {
+
         return (
           <section className="mt-5" key={index}>
             <div className="text-center">
@@ -40,7 +42,7 @@ const Cart = () => {
                <button onClick={() => vaciarCart(carrito)}>Vaciar carrito</button>
 
                 ) : (
-                   <button style={{display:'none'}}></button>
+                  <Link to="/">Volver</Link>
                 )}
       
 
