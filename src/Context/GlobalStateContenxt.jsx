@@ -1,8 +1,12 @@
 import React, { createContext, useEffect, useState } from 'react'
+import swal from '@sweetalert/with-react'
+import { useLocation } from 'react-router-dom'
 export const GlobalContext = createContext('')
 
     const GlobalStateContenxt = ({children}) => {
     const [carrito, setCarrito] = useState([])
+
+
 
   //para que no se pierda la info, tenemos q hacer que se ejecute una sola vez
   //cuando cargue el proyecto y lo coloque en el state.
@@ -23,7 +27,16 @@ export const GlobalContext = createContext('')
 
     const agregarCarrito = (producto) => {
       if(carrito.some(curso => curso.id === producto.id)){
-        alert('Curso ya agregado')
+        swal(
+          <div>
+              <h1>¡Algo salió mal!</h1>
+              <p>
+                  Ya tienes este curso
+              </p>
+
+          </div>
+        
+      )
       } else {
         setCarrito([...carrito, producto])
       }    

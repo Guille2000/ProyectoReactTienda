@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from '../Item/Item'
 import '../../scss/app.scss'
+import Loader from '../Loader/Loader'
 
 
 const ItemList = ({productos}) => {
@@ -10,9 +11,7 @@ const ItemList = ({productos}) => {
         productos.length > 0 ? (productos.map((productos) => (<Item key={productos.id} productos={productos} />) ) )
 
         : (
-          <div className="spinner-border text-primary mx-3" role="status">
-            <span className="sr-only">Cargando...</span>
-          </div>
+          <Loader/>
         )
 
         }

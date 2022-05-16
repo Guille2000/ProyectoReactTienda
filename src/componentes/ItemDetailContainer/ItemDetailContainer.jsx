@@ -18,8 +18,9 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const promesa = new Promise((resolve, reject) => {
             setTimeout(() => {
+                
                 resolve(filtrado)
-            }, 2000)
+            }, )
         })
         promesa.then((res) => {
             setProductos(res)

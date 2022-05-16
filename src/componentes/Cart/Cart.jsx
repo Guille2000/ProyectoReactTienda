@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../../Context/GlobalStateContenxt'
 import {Link} from 'react-router-dom'
+import '../../scss/app.scss'
+
 
 const Cart = () => {
   const {carrito, eliminarProducto, vaciarCart, total } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
@@ -13,13 +15,15 @@ const Cart = () => {
       {carrito.length > 0 ? carrito.map((prod, index) => {
 
         return (
-          <section className="mt-5" key={index}>
-            <div className="text-center">
-              <img src={prod.img} alt="Imagen del producto" style={{ width: '50%' }} />
+          
+          <section className="mt-5 d-md-flex align-items-center" key={index}>
+            <div className="contenedor-texto">
+            <div className="">
+              <img src={prod.img} alt="Imagen del producto" className="img-fluid mx-2" style={{ width: '30%' }} />
             </div>
-            <div className="texto mt-5 p-3">
-              <h2 className="text-dark fs-3 fw-700 programacion">{prod.h2}</h2>
-              <p className="text-dark fs-5 fw-400">{prod.parrafo}</p>
+            <div className="mt-2 mx-2">
+              <h2 className="text-dark fw-700 h2-carrito">{prod.h2}</h2>
+              <p className="text-dark descripcion-carrito fw-400">{prod.parrafo}</p>
               <div className="d-flex align-items-center">
                 <p className="m-0 me-2 puntaje fw-bold text-secondary">
                   {prod.puntaje}
@@ -30,23 +34,34 @@ const Cart = () => {
               <p className="precio fw-bold text-dark">{prod.creador} <span className="original fw-normal text-primary">{prod.autor}</span> </p>
               <p className="text-dark m-0"><i class="bi bi-patch-exclamation m-1"></i>{prod.actualizacion}</p>
               <p className="text-dark m-0"> <i class="bi bi-badge-cc m-1"></i>{prod.idioma}</p>
-              <p>Cantidad: {prod.cantidad}</p>
-              <h3 className="fs-1 text-dark mt-3 fw-bold">{prod.precio}</h3>
-              <button onClick={() => eliminarProducto(prod.id)  }>X</button>
+              <h3 className="fs-5 text-dark mt-3 fw-bold">Precio:{prod.precio}$</h3>
             </div>
+            </div>
+            <div className="contenedor-compra">
+            <h5>Resumen del pedido:</h5>
+            <p>Cantidad: {prod.cantidad}</p>
+            <p>El subtotal es: {prod.precio}$</p>
+            <p>El total a pagar es: {total}$</p>
 
+            <button className="btn btn-primary" onClick={() => eliminarProducto(prod.id)  }>Eliminar Curso</button>
+         
+            
+            </div>
           </section>
         )
       }) :
-        <h1>No hay productos</h1> 
+        <h4 className="text-center mt-3">¡No agregaste ningun curso! No dudes en agilizar tu aprendizaje.</h4> 
       }
-      <p>El total a pagar es: {total}</p>
 
 {carrito.length > 0 ? (
-               <button onClick={() => vaciarCart(carrito)}>Vaciar carrito</button>
-
+                <div className="text-center">
+               <button className="btn btn-danger" onClick={() => vaciarCart(carrito)}>Vaciar carrito</button>
+               <button className="btn btn-success d-block">Terminar Compra</button>
+               </div>
                 ) : (
-                  <Link to="/">Volver</Link>
+                  <div className="text-center">
+                  <Link className="btn btn-primary mt-2" to="/">Volver</Link>
+                  </div>
                 )}
     </>
   )

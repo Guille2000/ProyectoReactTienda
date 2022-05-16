@@ -59,7 +59,7 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellit
                 <p className="text-light m-0"><i class="bi bi-patch-exclamation m-1"></i>{actualizacion}</p>
                 <p className="text-light m-0"> <i class="bi bi-badge-cc m-1"></i>{idioma}</p>
 
-                <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
+                <h3 className="fs-1 text-light mt-3 fw-bold">{precio}$</h3>
                 {cantidadComprada > 0  ? (
                             <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light'>Finalizar Compra</Link>
                         ) : (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { data } from '../../config'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 const ItemListContainer = () => {
     const {cat} = useParams()
@@ -39,7 +40,7 @@ setProductos(res)
 
     return (
         <div>
-              {<ItemList productos={productos}/>}
+              {productos ? <ItemList productos={productos}/> : <Loader/>}
 
         </div>
     )
