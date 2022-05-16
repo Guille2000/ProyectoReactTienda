@@ -63,7 +63,7 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellit
                 {cantidadComprada > 0  ? (
                             <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light'>Finalizar Compra</Link>
                         ) : (
-                            <ItemCount manejarClick={quantityToAdd} stock={stock} />
+                            <ItemCount  manejarClick={quantityToAdd} stock={stock} />
 
                         )
 

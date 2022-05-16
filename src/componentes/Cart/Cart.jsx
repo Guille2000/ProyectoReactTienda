@@ -43,7 +43,7 @@ const Cart = () => {
             <p>El subtotal es: {prod.precio}$</p>
             <p>El total a pagar es: {total}$</p>
 
-            <button className="btn btn-primary" onClick={() => eliminarProducto(prod.id)  }>Eliminar Curso</button>
+            <button className="btn btn-warning text-dark" onClick={() => eliminarProducto(prod.id)  }><i className="mx-2 bi bi-x-lg"></i>Eliminar Curso</button>
          
             
             </div>
@@ -55,8 +55,8 @@ const Cart = () => {
 
 {carrito.length > 0 ? (
                 <div className="text-center">
-               <button className="btn btn-danger" onClick={() => vaciarCart(carrito)}>Vaciar carrito</button>
-               <button className="btn btn-success d-block">Terminar Compra</button>
+               <button className="btn btn-danger" onClick={() => vaciarCart(carrito)}><i className="bi bi-trash mx-2"></i>Vaciar carrito</button>
+               <button className="btn terminar-btn text-white d-block"><i className="mx-2 bi bi-bag-check"></i>Terminar Compra</button>
                </div>
                 ) : (
                   <div className="text-center">

@@ -27,16 +27,12 @@ export const GlobalContext = createContext('')
 
     const agregarCarrito = (producto) => {
       if(carrito.some(curso => curso.id === producto.id)){
-        swal(
-          <div>
-              <h1>¡Algo salió mal!</h1>
-              <p>
-                  Ya tienes este curso
-              </p>
+        swal({
+          title: "Error!",
+          text: "El producto ya está agregado, por favor elija otro",
+          icon: "warning",
+      })
 
-          </div>
-        
-      )
       } else {
         setCarrito([...carrito, producto])
       }    
