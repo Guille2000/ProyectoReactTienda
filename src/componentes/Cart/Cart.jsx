@@ -3,7 +3,7 @@ import { GlobalContext } from '../../Context/GlobalStateContenxt'
 import {Link} from 'react-router-dom'
 
 const Cart = () => {
-  const { cantidad,carrito, eliminarProducto, vaciarCart, total } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
+  const {carrito, eliminarProducto, vaciarCart, total } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
     console.log(carrito.cantidad)
 
     

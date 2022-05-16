@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import carrito from '../../img/carrito-de-compras.png';
+import carro from '../../img/carrito-de-compras.png';
 import heart from '../../img/heart.png';
 import notification from '../../img/notification.png';
 import user from '../../img/user.png';
@@ -9,11 +9,11 @@ import { GlobalContext } from '../../Context/GlobalStateContenxt';
 
 
 const Cartwidget = () => {
-  const {cantidad} = useContext(GlobalContext)
-  return (
+  const {carrito } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
 
+  return (
     <nav className="d-flex  gap-3">
-    <Link to="/Cart"><span>{cantidad}</span><img src={carrito} alt="" /></Link>
+    <Link to="/Cart"><span>{carrito.length}</span><img src={carro} alt="Cantidad de productos que tiene en el carro" /></Link>
     <a href="#"><img src={heart} alt="" /></a>
     <a href="#"><img src={notification} alt="" /></a>
     <a href="#"><img src={user} alt="" /></a>
