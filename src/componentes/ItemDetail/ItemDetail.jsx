@@ -9,11 +9,10 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellit
     const { carrito, agregarCarrito } = useContext(GlobalContext)
 
     
-
-    const [cantidadComprada, setCantidadComprada] = useState(0)
-    const quantityToAdd = (cantidad) => {
+        const [cantidadComprada, setCantidadComprada] = useState(0)
+        const quantityToAdd = (cantidad) => {
         setCantidadComprada(cantidad)
-        carrito.cantidad = cantidad
+        carrito.cantidad = quantityToAdd
         console.log(carrito.cantidad)
     }
 
@@ -61,13 +60,14 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellit
                 <p className="text-light m-0"> <i class="bi bi-badge-cc m-1"></i>{idioma}</p>
 
                 <h3 className="fs-1 text-light mt-3 fw-bold">{precio}</h3>
-                {cantidadComprada > 0 ? (
-                    <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light' >Terminar Compra</Link>
-                ) : (
-                    <ItemCount  manejarClick={quantityToAdd}
-                        stock={stock}
-                    />
-                )}
+                {cantidadComprada > 0  ? (
+                            <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light'>Finalizar Compra</Link>
+                        ) : (
+                            <ItemCount manejarClick={quantityToAdd} stock={stock} />
+
+                        )
+
+                        }
             </div>
         </section>
     )

@@ -3,8 +3,10 @@ import { GlobalContext } from '../../Context/GlobalStateContenxt'
 import {Link} from 'react-router-dom'
 
 const Cart = () => {
-  const { carrito, eliminarProducto, vaciarCart } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
+  const { cantidad,carrito, eliminarProducto, vaciarCart, total } = useContext(GlobalContext) //el nombre del context a consumir, el proveedor
     console.log(carrito.cantidad)
+
+    
 
   return (
     <>
@@ -30,7 +32,7 @@ const Cart = () => {
               <p className="text-dark m-0"> <i class="bi bi-badge-cc m-1"></i>{prod.idioma}</p>
               <p>Cantidad: {prod.cantidad}</p>
               <h3 className="fs-1 text-dark mt-3 fw-bold">{prod.precio}</h3>
-              <button onClick={() => eliminarProducto(prod.id)}>X</button>
+              <button onClick={() => eliminarProducto(prod.id)  }>X</button>
             </div>
 
           </section>
@@ -38,6 +40,7 @@ const Cart = () => {
       }) :
         <h1>No hay productos</h1> 
       }
+      <p>El total a pagar es: {total}</p>
 
 {carrito.length > 0 ? (
                <button onClick={() => vaciarCart(carrito)}>Vaciar carrito</button>
