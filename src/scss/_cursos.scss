@@ -1,5 +1,7 @@
 @use 'custom' as *; 
-
+li{
+    list-style: none;
+}
 .categoria-curso{
     border:1px solid $grisoscuro;
 }

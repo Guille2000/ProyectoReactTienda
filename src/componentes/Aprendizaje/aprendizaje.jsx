@@ -1,9 +1,9 @@
 import React from 'react'
 
-const aprendizaje = () => {
+const Aprendizaje = () => {
   return (
     <div>¡Nada que ver por aqui! Por ahora...</div>
   )
 }
 
-export default aprendizaje
+export default Aprendizaje

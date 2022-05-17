@@ -24,7 +24,7 @@ const Item = ({productos}) => {
             <p className="precio fw-bold ">{precio} <span className="original fw-normal">
                 {original}</span></p>
 
-            <Link to={`item-detail/${id}`}>Ver el Producto</Link>
+            <Link to={`/item-detail/${id}`}>Ver el Producto</Link>
 
         </div>
     </div>

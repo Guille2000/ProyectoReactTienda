@@ -39,9 +39,9 @@ const Cart = () => {
             </div>
             <div className="contenedor-compra">
             <h5>Resumen del pedido:</h5>
-            <p>Cantidad: {prod.cantidad}</p>
-            <p>El subtotal es: {prod.precio}$</p>
-            <p>El total a pagar es: {total}$</p>
+            <p className="text-primary">Cantidad: {prod.cantidad}</p>
+            <p className="text-danger">El subtotal es: {prod.precio}$</p>
+            <p className="text-warning">El total a pagar es: {total}$</p>
 
             <button className="btn btn-warning text-dark" onClick={() => eliminarProducto(prod.id)  }><i className="mx-2 bi bi-x-lg"></i>Eliminar Curso</button>
          
@@ -60,7 +60,7 @@ const Cart = () => {
                </div>
                 ) : (
                   <div className="text-center">
-                  <Link className="btn btn-primary mt-2" to="/">Volver</Link>
+                  <Link className="btn btn-primary mt-2" to="/"><i className="mx-1 bi bi-arrow-left"></i>Volver</Link>
                   </div>
                 )}
     </>

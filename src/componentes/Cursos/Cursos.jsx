@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../../scss/app.scss'
 import Contenedor from '../Contenedor/Contenedor'
 import {NavLink} from 'react-router-dom'
 
 
 const Cursos = () => {
+  const [curso,setCurso] = useState(null)
   return (
     <section className="cursos container-xl mt-5 pt-5">
       <h3>Elige tu curso preferido</h3>
@@ -12,19 +13,20 @@ const Cursos = () => {
 
       <nav className="nav masonry-filter">
         <li className="nav-item">
-          <NavLink to="/category/javascript" className="nav-link text-dark">Javascript</NavLink>
+          <button className="nav-link text-dark"  onClick={()=>setCurso(null)}>Todos</button>
+          <button onClick={()=>setCurso('javascript')}className="nav-link text-dark">Javascript</button>
         </li>
         <li className="nav-item">
-          <NavLink to="/category/diseño"  className="nav-link text-dark">UI Y UIX</NavLink>
+          <button onClick={()=>setCurso('diseño')}  className="nav-link text-dark">UI Y UIX</button>
         </li>
 
         <li className="nav-item">
-          <NavLink to="/category/desarrollo"  className="nav-link text-dark">Desarrollo Web Completo</NavLink>
+          <button onClick={()=>setCurso('desarrollo')}  className="nav-link text-dark">Desarrollo Web Completo</button>
         </li>
 
         
       </nav>
-      <Contenedor/>
+      <Contenedor curso={curso}/>
 
     </section>
   )

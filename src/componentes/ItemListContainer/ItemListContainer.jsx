@@ -4,9 +4,11 @@ import { data } from '../../config'
 import { useParams } from 'react-router-dom'
 import Loader from '../Loader/Loader'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({curso}) => {
     const {cat} = useParams()
     const [productos, setProductos] = useState([])
+
+
 
 
 
@@ -17,15 +19,13 @@ useEffect(() => {
  const promesa = new Promise((resolve, reject) => {
      setTimeout(() => {
          let filtrarData = data
-         if(cat === 'javascript'){
-            filtrarData = data.filter((curso => curso.categoria === 'javascript'))
-         }
-         if(cat === 'diseño'){
-             filtrarData = data.filter((curso => curso.categoria === 'diseño'))
-         }
-         if(cat === 'desarrollo'){
-            filtrarData = data.filter((curso => curso.categoria === 'desarrollo'))
-         }
+  
+            if(curso){
+             
+                filtrarData = data.filter((e => e.categoria == curso))
+            }
+       
+
      resolve(filtrarData)
      }, 2000)
     })
@@ -36,10 +36,11 @@ setProductos(res)
  return () => {
 
         }
-    }, [])
+    }, [curso])
 
     return (
         <div>
+            
               {productos ? <ItemList productos={productos}/> : <Loader/>}
 
         </div>

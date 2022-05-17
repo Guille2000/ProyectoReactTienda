@@ -13,7 +13,7 @@ const Cartwidget = () => {
 
   return (
     <nav className="d-flex  gap-3">
-    <Link to="/Cart"><span>{carrito.length}</span><img src={carro} alt="Cantidad de productos que tiene en el carro" /></Link>
+    <Link to="/Cart"><span className="text-primary">{carrito.length}</span><img src={carro} alt="Cantidad de productos que tiene en el carro" /></Link>
     <a href="#"><img src={heart} alt="" /></a>
     <a href="#"><img src={notification} alt="" /></a>
     <a href="#"><img src={user} alt="" /></a>

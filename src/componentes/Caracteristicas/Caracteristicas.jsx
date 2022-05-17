@@ -9,7 +9,7 @@ const Caracteristicas = () => {
                     <div className="d-flex justify-content-around align-items-center">
                         <div className="me-3">
                             <div className="icono">
-                            <i class="bi bi-play-fill fs-3"></i>
+                            <i className="bi bi-play-fill fs-3"></i>
                             </div>
                         </div>
                         <p className="fw-bold m-0">Aprende habilidades a tu ritmo</p>
@@ -19,7 +19,7 @@ const Caracteristicas = () => {
                     <div className="d-flex justify-content-around align-items-center">
                         <div className="me-3">
                             <div className="icono">
-                            <i class="bi bi-star-fill fs-3"></i>
+                            <i className="bi bi-star-fill fs-3"></i>
                             </div>
                         </div>
                         <p className="fw-bold m-0">Con descuentos en todos nuestros cursos</p>
@@ -29,7 +29,7 @@ const Caracteristicas = () => {
                     <div className="d-flex justify-content-around align-items-center">
                         <div className="me-3">
                             <div className="icono">
-                            <i class="bi bi-phone-fill fs-3"></i>
+                            <i className="bi bi-phone-fill fs-3"></i>
                             </div>
                         </div>
                         <p className="fw-bold m-0">Desde tu dispositivo movil o pc, como tú quieras</p>

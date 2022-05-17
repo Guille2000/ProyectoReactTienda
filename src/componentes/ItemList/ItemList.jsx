@@ -4,19 +4,20 @@ import '../../scss/app.scss'
 import Loader from '../Loader/Loader'
 
 
-const ItemList = ({productos}) => {
+const ItemList = ({ productos }) => {
   return (
-  <div className="items">
+    <div className="items">
       {
-        productos.length > 0 ? (productos.map((productos) => (<Item key={productos.id} productos={productos} />) ) )
+        productos.length > 0 ? (productos.map((productos) => (<Item key={productos.id} productos={productos} />)))
 
-        : (
-          <Loader/>
-        )
+          : (
+            <Loader />
+          )
 
-        }
+      }
 
-        </div>
+    </div>
+
 
   )
 }

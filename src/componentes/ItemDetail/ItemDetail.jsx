@@ -61,7 +61,7 @@ const ItemDetail = ({ productos: {id,stock, img, h2, parrafo, puntaje, estrellit
 
                 <h3 className="fs-1 text-light mt-3 fw-bold">{precio}$</h3>
                 {cantidadComprada > 0  ? (
-                            <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light'>Finalizar Compra</Link>
+                            <Link to={'/cart'} onClick={() => agregarCarrito(itemCarro)} className='btn btn-success text-light'><i className="mx-2 bi bi-bag"></i>Ir al carrito</Link>
                         ) : (
                             <ItemCount  manejarClick={quantityToAdd} stock={stock} />
 

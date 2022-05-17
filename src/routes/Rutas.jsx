@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route}  from 'react-router-dom'
 import Business from '../componentes/Business/Business'
-import Aprendizaje from '../componentes/Aprendizaje/aprendizaje'
+import Aprendizaje from '../componentes/Aprendizaje/Aprendizaje'
 import Layout from '../componentes/Layout/Layout'
 import Inicio from '../componentes/Inicio/Inicio'
 import Error from '../componentes/Error/Error'
@@ -16,7 +16,7 @@ const Rutas = () => {
         <Route path="/" element={<Layout/>}>
 
         <Route index element={<Inicio/>} />
-        <Route path="/category/:cat" element={<ItemListContainer/> } />
+       {/*<Route path="/category/:cat" element={<ItemListContainer/> } />*/}
         <Route path="/cart"  element={<Cart/>} />
         <Route path="/Business" element={<Business/>}/>
         <Route path="/Aprendizaje" element={<Aprendizaje/>}/>
